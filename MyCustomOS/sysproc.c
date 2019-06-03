@@ -93,10 +93,19 @@ sys_uptime(void)
   return xticks;
 }
 
+// This system call remains from previous project
 int
 sys_getppid(void)
 {
   struct proc* currentProc=myproc();
   struct proc* parrentProc=currentProc->parent;
   return parrentProc->pid;
+}
+
+
+// New system call for getPerformanceData
+int
+sys_getPerformanceData(void)
+{
+ return 2;
 }
