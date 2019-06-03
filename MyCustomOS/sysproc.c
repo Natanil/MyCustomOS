@@ -107,5 +107,9 @@ sys_getppid(void)
 int
 sys_getPerformanceData(void)
 {
- return 2;
+ int wtime;
+ //int rtime;
+ argint(0,&wtime);
+
+ return wtime;
 }
